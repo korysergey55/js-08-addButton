@@ -1,15 +1,14 @@
-.create{
-    border: 5px solid green;
-    margin: 10px 10px;
+.create {
+  border: 5px solid green;
+  margin: 10px 10px;
 }
-.remove{
-
-    border: 5px solid red;
+.remove {
+  border: 5px solid red;
 }
-.button-list{
-    outline: 1px solid black;
+.button-list {
+  outline: 1px dashed blue;
 }
-.taggle-class{
-    color: white;
-    background-color: blueviolet;
+.taggle-class {
+  color: white;
+  background-color: blueviolet;
 }
