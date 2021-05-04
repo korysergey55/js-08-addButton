@@ -1,31 +1,35 @@
-const debounseInputRef = document.querySelector(".input-debounse");
+const InputRef = document.querySelector(".input-debounse");
 const jsListRef = document.querySelector(".js-list");
 
 const tech = [
-  { label: "HTML" },
-  { label: "CSS" },
-  { label: "JavaScript" },
-  { label: "React" },
-  { label: "Redux" },
-  { label: "Vue" },
-  { label: "Java" },
-  { label: "Piton" },
+  { label: "Apple" },
+  { label: "Apricot" },
+  { label: "Avocado" },
+  { label: "Pineapple" },
+  { label: "Banana" },
+  { label: "Grapefruit" },
+  { label: "Lemon" },
+  { label: "Orange" },
 ];
 
-debounseInputRef.addEventListener("input", onFilterChange);
+const addListItems = createListItem(tech);
 
 function createListItem(items) {
   const markup = items.map((item) => `<li>${item.label}</li>`).join("");
+  //markup.classList.add("js-li");
   return markup;
 }
-const addListItems = createListItem(tech);
 jsListRef.insertAdjacentHTML("afterbegin", addListItems);
 
-function onFilterChange(simbol) {
-  const filter = simbol.target.value;
+InputRef.addEventListener("input", onFilterChange);
+
+function onFilterChange(item) {
+  const filter = item.target.value;
   const filteredItems = tech.filter((t) =>
     t.label.toLocaleLowerCase().includes(filter)
   );
   const filteredMarkup = createListItem(filteredItems);
   jsListRef.innerHTML = filteredMarkup;
 }
+
+

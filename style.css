@@ -15,3 +15,9 @@
 .input{
     margin-top: 50px;
 }
+.js-list:hover{
+  color: blue;
+}
+.js-li:hover{
+ color: yellow;
+}
