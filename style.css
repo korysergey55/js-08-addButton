@@ -15,9 +15,6 @@
 .input{
     margin-top: 50px;
 }
-.js-list:hover{
+.js-list li:hover{
   color: blue;
-}
-.js-li:hover{
- color: yellow;
 }

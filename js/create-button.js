@@ -22,20 +22,20 @@ function creatte() {
 }
 
 function remove() {
-  buttonList.removeChild(btn);
+  buttonList.removeChild(buttonList.lastElementChild);
 }
 
 function onClick(evnt) {
   if (evnt.target.nodeName !== "BUTTON") {
     return;
   }
-  //   const activeBtn = document.querySelector(".taggle-class");
-  //   if (activeBtn) {
-  //     activeBtn.classList.remove("taggle-class");
-  //   }
-  //     evnt.target.classList.add("taggle-class");
+    const activeBtn = document.querySelector(".taggle-class");
+    if (activeBtn) {
+      activeBtn.classList.remove("taggle-class");
+    }
+      evnt.target.classList.add("taggle-class");
 
-  evnt.target.classList.toggle("taggle-class");
+  //evnt.target.classList.toggle("taggle-class");
 
   console.log(evnt.target.textContent);
   console.log(evnt.currentTarget);
